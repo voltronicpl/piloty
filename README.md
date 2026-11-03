@@ -1,13 +1,13 @@
 # Piloty
 
-Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamaha (YNCA)** w jednej karcie, z 8 szatami graficznymi do wyboru.
+Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamaha (YNCA)** w jednej karcie, z 13 szatami graficznymi do wyboru.
 
 - **Kafelek albo karta** – kafelek pokazuje status i po kliknięciu otwiera pilota w oknie; karta pokazuje pilota od razu.
 - **3 zakładki** – Uniwersalny, Telewizor, Amplituner.
 - **Apki** – Apple TV, Netflix, YouTube, Prime, Player, HBO Max, Polsat Go, Disney+, Spotify, HDMI 1. Każda odpala się na TV i przełącza amplituner na HDMI1.
 - **Głośność zawsze przez amplituner**, a jeden przycisk Power włącza lub wyłącza oba urządzenia.
 - **Status na żywo** – czy TV i amplituner są włączone, co leci, wejście i głośność.
-- **8 szat** – Krem, Niebieski neon, Arctic, Czarny chrom, Mechaniczny, Drewno i mosiądz, Synthwave, Grafit minimal. Wybór zapisuje się na koncie użytkownika HA, a opcjonalnie tylko na danym urządzeniu.
+- **13 szat** – Krem, Niebieski neon, Arctic, Czarny chrom, Mechaniczny, Drewno i mosiądz, Synthwave, Grafit minimal, Hologram, Samochodowy, Leśny, Ocean, Kosmos. Wszystkie poza Kremem mają animowane przyciski. Wybór zapisuje się na koncie użytkownika HA, a opcjonalnie tylko na danym urządzeniu.
 
 ## Wymagania
 
@@ -50,7 +50,7 @@ theme: cream                               # domyślna szata, dopóki ktoś nie 
 | `amp_source` | nie | wejście amplitunera dla apek, domyślnie `HDMI1` |
 | `mode` | nie | `tile` (domyślnie) lub `card` |
 | `room` | nie | nagłówek, domyślnie `Salon` |
-| `theme` | nie | `cream`, `neon`, `arctic`, `chrome`, `steam`, `wood`, `synth`, `graphite` |
+| `theme` | nie | `cream`, `neon`, `arctic`, `chrome`, `steam`, `wood`, `synth`, `graphite`, `holo`, `car`, `forest`, `ocean`, `space` |
 | `apps` | nie | własna lista apek (zastępuje domyślną) |
 
 ### Własne apki
