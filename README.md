@@ -3,7 +3,7 @@
 Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamaha (YNCA)** w jednej karcie, z 13 szatami graficznymi do wyboru.
 
 - **Kafelek albo karta** – kafelek pokazuje status i po kliknięciu otwiera pilota w oknie; karta pokazuje pilota od razu.
-- **3 zakładki** – Uniwersalny, Telewizor, Amplituner.
+- **3 zakładki** – Uniwersalny, Telewizor, Amplituner. Zakładka Amplituner ma pełny pilot Yamahy: wejścia, sceny, Sleep, tryby Movie/Music/Sur.Decode/Straight/Enhancer/Direct, menu, tuner, odtwarzanie i 16 trybów DSP.
 - **Apki** – Apple TV, Netflix, YouTube, Prime, Player, HBO Max, Polsat Go, Disney+, Spotify, HDMI 1. Każda odpala się na TV i przełącza amplituner na HDMI1.
 - **Głośność zawsze przez amplituner**, a jeden przycisk Power włącza lub wyłącza oba urządzenia.
 - **Status na żywo** – czy TV i amplituner są włączone, co leci, wejście i głośność.
@@ -45,8 +45,12 @@ theme: cream                               # domyślna szata, dopóki ktoś nie 
 | `amp_remote` | nie | `remote.*` z YNCA – sekcja Menu w zakładce Amplituner |
 | `amp_volume_db` | nie | encja `number` z głośnością w dB; bez niej głośność jest w % |
 | `amp_scenes` | nie | lista encji `button.*` scen; domyślnie wykrywane automatycznie |
-| `amp_tuner_band` | nie | encja `select` pasma tunera (FM/AM) |
-| `amp_tuner_preset` | nie | encja `number` presetu tunera |
+| `amp_tuner_band` | nie | encja `select` pasma tunera (FM/AM); domyślnie wykrywana automatycznie |
+| `amp_tuner_preset` | nie | encja `number`/`select` presetu tunera; wykrywana automatycznie |
+| `amp_tuner_fm` / `amp_tuner_am` | nie | encje `number` częstotliwości FM/AM (Tuning ±); wykrywane automatycznie |
+| `amp_sleep` | nie | encja `select` timera Sleep; wykrywana automatycznie |
+| `amp_enhancer` / `amp_direct` | nie | encje `switch` Enhancer i Direct; wykrywane automatycznie |
+| `amp_modes` | nie | lista trybów DSP na dole zakładki Amplituner (domyślnie 16 popularnych) |
 | `amp_source` | nie | wejście amplitunera dla apek, domyślnie `HDMI1` |
 | `mode` | nie | `tile` (domyślnie) lub `card` |
 | `room` | nie | nagłówek, domyślnie `Salon` |
