@@ -22,6 +22,14 @@ Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamah
 
 ## Konfiguracja
 
+Karta sama znajduje telewizor (Android TV Remote) i amplituner (YNCA), więc najprostsza konfiguracja to:
+
+```yaml
+type: custom:piloty-card
+```
+
+Jeżeli podane ID encji nie istnieje, karta też spróbuje znaleźć właściwą encję sama. Wejście amplitunera dla apek wybiera automatycznie (HDMI1, a jak takiego nie ma, wejście z Blu-ray/BD albo HDMI w nazwie). Wszystko można nadpisać:
+
 ```yaml
 type: custom:piloty-card
 mode: tile                 # tile = kafelek + okno, card = pełny pilot od razu

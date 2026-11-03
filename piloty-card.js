@@ -4,7 +4,7 @@
  * MIT License
  */
 (() => {
-const VERSION = '1.2.0';
+const VERSION = '1.2.1';
 const STRUCT = "\n\n\nbutton{font-family:inherit;color:inherit;border:none;cursor:pointer;transition:transform .08s,box-shadow .12s}\n.scr{width:390px;height:844px;box-sizing:border-box;padding:52px 16px 22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}\n.hd{display:flex;align-items:center;gap:8px}.ttl{font-size:24px;font-weight:800;flex:1}\n.hi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center}\n.card{display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:20px}\n.devs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n.dev{display:flex;align-items:center;gap:8px}\n.di{width:36px;height:36px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;background:rgba(128,128,128,.14)}\n.np{display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid rgba(128,128,128,.25)}\n.npt{display:flex;flex-direction:column;flex:1;gap:1px}.npk{font-size:10px;font-weight:800;opacity:.65;letter-spacing:.06em;text-transform:uppercase}\n.nb{width:32px;height:32px;border-radius:10px;font-size:12px}\n.thumb{width:64px;height:44px;border-radius:10px;background:linear-gradient(160deg,#3d6f9e,#a9c9e8 55%,#24405e);flex:none}\n.ci{display:flex;flex-direction:column;gap:3px;flex:1}.nm{font-size:15px;font-weight:800}.st{font-size:12px;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:4px}\n.ampi{font-size:12px;font-weight:800;padding:6px 10px;border-radius:12px}\n.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:4px;border-radius:16px}\n.tab{height:40px;border-radius:12px;font-size:13px;font-weight:800;position:relative;overflow:hidden}\n.lbl{font-size:13px;font-weight:800;margin-bottom:-4px}\n.apps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}\n.app{height:54px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 2px;font-size:10px;white-space:nowrap;font-weight:800;position:relative;overflow:hidden}\n.badge{width:22px;height:22px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}\n.mid{display:flex;align-items:center;justify-content:space-between}\n.rock{width:62px;height:190px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 0;box-sizing:border-box;position:relative;overflow:hidden}\n.rk{width:52px;height:56px;border-radius:18px;background:transparent;font-size:26px;font-weight:700}\n.vl{font-size:10px;font-weight:800;text-align:center;line-height:1.4}\n.dpad{width:196px;height:196px;border-radius:98px;position:relative;isolation:isolate}\n.dk{position:absolute;width:48px;height:48px;background:transparent;display:flex;align-items:center;justify-content:center;border-radius:24px;z-index:2}\n.u{left:74px;top:6px}.dn{left:74px;bottom:6px}.l{left:6px;top:74px}.r{right:6px;top:74px}\n.ok{position:absolute;left:56px;top:56px;width:84px;height:84px;border-radius:42px;font-size:20px;font-weight:800;z-index:2}\n.side{display:flex;flex-direction:column;gap:10px}\n.sk{width:58px;height:56px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:9px;font-weight:800;position:relative;overflow:hidden}\n.media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}\n.mk{height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}\n.big{height:60px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:800;margin-top:auto;position:relative;overflow:hidden}\n\n.uni{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}\n.pan{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0;overflow-y:auto;padding:4px 6px 10px;margin:0 -6px}\n.g3,.g4,.g5{display:grid;gap:8px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}\n.pan .mk{height:44px;font-size:11px;font-weight:800;gap:6px;flex:none}\n.pan .lbl{margin:4px 0 -2px}\n.pan .rock{height:176px;flex:none}\n.pan .mid{flex:none}\n.mk.on{outline:2px solid currentColor;outline-offset:1px}\n.mk.dg{font-size:17px;height:48px}\n.mk.big2{font-size:24px;height:50px}\n.mk.pwr{color:#e5484d}\n.mk.rec{color:#e5484d}\n.cdot{width:22px;height:14px;border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.3)}\n.vread{display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}\n.pan .sk span{font-size:9px;line-height:1.1;text-align:center}\n";
 const THEMES = {
  "cream": "\n.scr{background:linear-gradient(180deg,#f1ece5 0%,#e9e2d8 100%);color:#2b2420;font-family:Nunito,system-ui,sans-serif}\n.ttl{font-size:26px;color:#2b2420}\n.hi{background:transparent;box-shadow:none;color:#3a312b}\n.card,.app,.rock,.sk,.mk{background:linear-gradient(180deg,#fbf9f6 0%,#f3eee8 100%);border:1px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(120,95,70,.16),0 1px 2px rgba(120,95,70,.12),inset 0 -2px 3px rgba(150,125,100,.08)}\n.card{border-radius:24px}\n.app{border-radius:999px;justify-content:center;padding:0 8px}\n.rock{border-radius:999px}\n.sk{border-radius:16px}\n.mk{border-radius:999px}\n.tabs{background:#e6dfd5;box-shadow:inset 0 1px 3px rgba(120,95,70,.18)}\n.tab{border-radius:999px;background:linear-gradient(180deg,#fbf9f6,#f1ebe4);color:#3a312b;box-shadow:0 2px 5px rgba(120,95,70,.14)}\n.tab.on{background:linear-gradient(180deg,#8d6446,#6e4a30);color:#fff;box-shadow:0 4px 10px rgba(110,74,48,.35)}\n.ampi{background:#efe8df;color:#6e4a30;border-radius:999px}\n.di{background:#efe8df;color:#3a312b}\n.dot{box-shadow:0 0 0 2px rgba(47,184,106,.2)}\n.app.on{background:linear-gradient(180deg,#f3ece4,#ebe3d9);box-shadow:inset 0 2px 5px rgba(120,95,70,.22);outline:2px solid #8d6446;outline-offset:1px}\n.badge{border-radius:6px}\n.dpad{background:radial-gradient(circle at 50% 35%,#fdfcfa 0%,#f4efe9 60%,#ebe4db 100%);box-shadow:0 12px 26px rgba(120,95,70,.2),0 2px 4px rgba(120,95,70,.12),inset 0 -3px 6px rgba(150,125,100,.1)}\n.dk{color:#3a312b}\n.dk svg{stroke-width:2}\n.ok{left:62px;top:62px;width:72px;height:72px;background:linear-gradient(180deg,#fdfcfa,#f0eae2);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 10px rgba(120,95,70,.22),0 0 0 6px rgba(235,228,219,.6);color:#2b2420;font-size:19px}\n.rk{color:#3a312b;font-weight:600}\n.sk.on{color:#b3261e}\n.big{border-radius:999px;color:#fff;background:linear-gradient(180deg,#8d6446 0%,#6e4a30 100%);box-shadow:0 10px 22px rgba(110,74,48,.35),0 2px 0 #573a25;font-weight:700}\n.hi:active{transform:scale(.9)}\n.app:active,.sk:active,.mk:active,.tab:active,.card:active{transform:scale(.96);box-shadow:inset 0 3px 7px rgba(120,95,70,.26)}\n.rk:active,.dk:active{transform:scale(.88);background:rgba(120,95,70,.08)}\n.ok:active{transform:scale(.94);box-shadow:inset 0 3px 8px rgba(120,95,70,.3),0 0 0 6px rgba(235,228,219,.6)}\n.big:active{transform:translateY(2px);box-shadow:0 3px 8px rgba(110,74,48,.3),inset 0 3px 8px rgba(0,0,0,.25)}\n",
@@ -39,6 +39,33 @@ const DEFAULT_APPS = [
 ];
 
 const OFF = ['off', 'unavailable', 'unknown', 'standby'];
+
+/* Szuka TV (Android TV Remote) i amplitunera (YNCA) wśród encji HA. */
+const detect = (st) => {
+  const ids = Object.keys(st || {});
+  const out = {};
+  const mps = ids.filter((e) => e.indexOf('media_player.') === 0);
+  const tvs = mps.filter((e) => (st[e].attributes || {}).device_class === 'tv');
+  for (const p of tvs) {
+    const r = `remote.${p.split('.')[1]}`;
+    if (st[r]) { out.tv_remote = r; out.tv_player = p; break; }
+  }
+  if (!out.tv_remote) {
+    const r = ids.find((e) => e.indexOf('remote.') === 0 && /tv|google|android/i.test(e) && !/ampl|yamaha|rx_v|ynca/i.test(e));
+    if (r) { out.tv_remote = r; const p = `media_player.${r.split('.')[1]}`; if (st[p]) out.tv_player = p; }
+  }
+  const amps = mps.filter((e) => (st[e].attributes || {}).device_class === 'receiver');
+  const amp = amps.find((e) => ((st[e].attributes || {}).source_list || []).length) || amps[0];
+  if (amp) {
+    out.amp = amp;
+    const o = amp.split('.')[1];
+    if (st[`remote.${o}`]) out.amp_remote = `remote.${o}`;
+    else { const r = ids.find((e) => e.indexOf(`remote.${o}`) === 0); if (r) out.amp_remote = r; }
+    const v = ids.find((e) => e.indexOf(`number.${o}`) === 0 && /volume/i.test(e));
+    if (v) out.amp_volume_db = v;
+  }
+  return out;
+};
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const SV = (d, w = 20) => `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -115,16 +142,17 @@ class PilotyCard extends HTMLElement {
     });
   }
 
-  static getStubConfig() {
-    return { tv_remote: 'remote.telewizor', tv_player: 'media_player.telewizor', amp: 'media_player.amplituner', mode: 'tile' };
+  static getStubConfig(hass) {
+    const d = hass ? detect(hass.states) : {};
+    return Object.assign({ mode: 'tile', room: 'Salon' }, d);
   }
 
   setConfig(config) {
-    if (!config || !config.tv_remote || !config.amp) throw new Error('Piloty: podaj tv_remote i amp');
-    this._c = Object.assign({ room: 'Salon', mode: 'tile', amp_source: 'HDMI1', theme: 'cream' }, config);
-    this._apps = Array.isArray(config.apps) && config.apps.length ? config.apps : DEFAULT_APPS;
+    this._cfg = Object.assign({}, config || {});
+    this._c = Object.assign({ room: 'Salon', mode: 'tile', amp_source: 'HDMI1', theme: 'cream' }, this._cfg);
+    this._apps = Array.isArray(this._cfg.apps) && this._cfg.apps.length ? this._cfg.apps : DEFAULT_APPS;
     this._key = '';
-    if (this._hass) this._render(true);
+    if (this._hass) { this._resolveCfg(); this._render(true); }
   }
 
   getCardSize() { return this._c && this._c.mode === 'card' ? 14 : 3; }
@@ -132,8 +160,26 @@ class PilotyCard extends HTMLElement {
   set hass(h) {
     const first = !this._hass;
     this._hass = h;
+    this._resolveCfg();
     if (first) { loadFont(); this._loadTheme(); }
     this._render(false);
+  }
+
+  _resolveCfg() {
+    const st = this._hass.states;
+    const d = detect(st);
+    const c = Object.assign({ room: 'Salon', mode: 'tile', amp_source: 'HDMI1', theme: 'cream' }, this._cfg);
+    ['tv_remote', 'tv_player', 'amp', 'amp_remote', 'amp_volume_db'].forEach((k) => {
+      if ((!c[k] || !st[c[k]]) && d[k]) c[k] = d[k];
+    });
+    if (c.amp && st[c.amp] && !this._cfg.amp_source) {
+      const list = st[c.amp].attributes.source_list || [];
+      if (!list.includes(c.amp_source)) {
+        const hit = list.find((x) => /^hdmi ?1$/i.test(x)) || list.find((x) => /blu|bd/i.test(x)) || list.find((x) => /hdmi/i.test(x));
+        if (hit) c.amp_source = hit;
+      }
+    }
+    this._c = c;
   }
 
   /* ---------- motyw: konto + urządzenie ---------- */
@@ -195,7 +241,7 @@ class PilotyCard extends HTMLElement {
     let vol = '';
     if (db && !OFF.includes(db.state)) vol = `${Number(db.state).toFixed(1).replace('.', ',')} dB`;
     else if (typeof a.volume_level === 'number') vol = `${Math.round(a.volume_level * 100)}%`;
-    const ampObj = c.amp.split('.')[1];
+    const ampObj = (c.amp || '.').split('.')[1];
     let scenes = c.amp_scenes;
     if (!Array.isArray(scenes)) {
       scenes = Object.keys(this._hass.states).filter((e) => e.indexOf(`button.${ampObj}_`) === 0);
@@ -247,7 +293,8 @@ class PilotyCard extends HTMLElement {
 
   _ent(key, domains, word) {
     if (this._c[key]) return this._c[key];
-    const obj = this._c.amp.split('.')[1];
+    const obj = (this._c.amp || '.').split('.')[1];
+    if (!obj) return '';
     const ds = Array.isArray(domains) ? domains : [domains];
     return Object.keys(this._hass.states).find((e) => ds.some((d) => e.indexOf(`${d}.${obj}`) === 0) && e.indexOf(word) > 0) || '';
   }
@@ -260,9 +307,12 @@ class PilotyCard extends HTMLElement {
 
   _missing() {
     const c = this._c;
-    return ['tv_remote', 'amp', 'tv_player', 'amp_remote', 'amp_volume_db']
+    const miss = ['tv_remote', 'amp', 'tv_player', 'amp_remote', 'amp_volume_db']
       .filter((k) => c[k] && !this._hass.states[c[k]])
       .map((k) => `${k}: ${c[k]}`);
+    if (!c.tv_remote) miss.unshift('tv_remote: (nie znaleziono telewizora z Android TV Remote)');
+    if (!c.amp) miss.unshift('amp: (nie znaleziono amplitunera z YNCA)');
+    return miss;
   }
 
   _banner() {
