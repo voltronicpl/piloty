@@ -1,13 +1,13 @@
 # Piloty
 
-Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamaha (YNCA)** w jednej karcie, z 13 szatami graficznymi do wyboru.
+Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamaha (YNCA)** w jednej karcie, z 15 szatami graficznymi do wyboru.
 
 - **Kafelek albo karta** – kafelek pokazuje status i po kliknięciu otwiera pilota w oknie; karta pokazuje pilota od razu.
 - **3 zakładki** – Uniwersalny, Telewizor, Amplituner. Zakładka Amplituner ma pełny pilot Yamahy: wejścia, sceny, Sleep, tryby Movie/Music/Sur.Decode/Straight/Enhancer/Direct, menu, tuner, odtwarzanie i 16 trybów DSP.
 - **Apki** – Apple TV, Netflix, YouTube, Prime, Player, HBO Max, Polsat Go, Disney+, Spotify, HDMI 1. Każda odpala się na TV i przełącza amplituner na HDMI1.
 - **Głośność zawsze przez amplituner**, a jeden przycisk Power włącza lub wyłącza oba urządzenia.
 - **Status na żywo** – czy TV i amplituner są włączone, co leci, wejście i głośność.
-- **13 szat** – Krem, Niebieski neon, Arctic, Czarny chrom, Mechaniczny, Drewno i mosiądz, Synthwave, Grafit minimal, Hologram, Samochodowy, Leśny, Ocean, Kosmos. Wszystkie poza Kremem mają animowane przyciski. Wybór zapisuje się na koncie użytkownika HA, a opcjonalnie tylko na danym urządzeniu.
+- **13 szat** – Krem, Niebieski neon, Arctic, Czarny chrom, Mechaniczny, Drewno i mosiądz, Synthwave, Grafit minimal, Hologram, Samochodowy, Leśny, Ocean, Kosmos, Sci-Fi, Robot. Wszystkie poza Kremem mają animowane przyciski. Wybór zapisuje się na koncie użytkownika HA, a opcjonalnie tylko na danym urządzeniu.
 
 ## Wymagania
 
@@ -62,7 +62,7 @@ theme: cream                               # domyślna szata, dopóki ktoś nie 
 | `amp_source` | nie | wejście amplitunera dla apek, domyślnie `HDMI1` |
 | `mode` | nie | `tile` (domyślnie) lub `card` |
 | `room` | nie | nagłówek, domyślnie `Salon` |
-| `theme` | nie | `cream`, `neon`, `arctic`, `chrome`, `steam`, `wood`, `synth`, `graphite`, `holo`, `car`, `forest`, `ocean`, `space` |
+| `theme` | nie | `cream`, `neon`, `arctic`, `chrome`, `steam`, `wood`, `synth`, `graphite`, `holo`, `car`, `forest`, `ocean`, `space`, `scifi`, `robot` |
 | `apps` | nie | własna lista apek (zastępuje domyślną) |
 
 ### Własne apki
@@ -81,6 +81,20 @@ apps:
 ```
 
 Domyślne nazwy pakietów apek mogą się różnić w zależności od telewizora. Jeżeli któraś apka się nie odpala, sprawdź jej `app_id` w atrybutach `media_player` telewizora (Narzędzia deweloperskie → Stany) i wpisz go w `activity`.
+
+## Kafelek
+
+W trybie `tile` na górze kafelka jest szybki przycisk **Włącz/Wyłącz** (TV + amplituner naraz). Kliknięcie w dowolne inne miejsce kafelka otwiera pilota.
+
+## Powiązania (osobna karta)
+
+Dodaj drugą kartę, żeby ustawić, co ma się dziać na amplitunerze po kliknięciu apki albo Power w pilocie uniwersalnym:
+
+```yaml
+type: custom:piloty-links-card
+```
+
+Dla każdego przycisku wybierasz wejście (domyślnie **PC**, jeśli takie istnieje), tryb dźwięku, scenę i to, czy włączać amplituner. Ustawienia zapisują się na koncie użytkownika HA. Pilot korzysta z nich od razu po zapisaniu.
 
 ## Wybór szaty
 
