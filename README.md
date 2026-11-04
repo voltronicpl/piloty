@@ -82,6 +82,10 @@ apps:
 
 Domyślne nazwy pakietów apek mogą się różnić w zależności od telewizora. Jeżeli któraś apka się nie odpala, sprawdź jej `app_id` w atrybutach `media_player` telewizora (Narzędzia deweloperskie → Stany) i wpisz go w `activity`.
 
+## Klawiatura
+
+Przycisk **Klawiatura** (Uniwersalny i Telewizor) otwiera pole tekstowe: wpisany tekst trafia do aktywnego pola na TV (np. wyszukiwarka Netflixa). Wymaga włączonej opcji **Enable IME** w ustawieniach integracji Android TV Remote.
+
 ## Kafelek
 
 W trybie `tile` na górze kafelka jest szybki przycisk **Włącz/Wyłącz** (TV + amplituner naraz). Kliknięcie w dowolne inne miejsce kafelka otwiera pilota.

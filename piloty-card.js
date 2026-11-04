@@ -4,7 +4,7 @@
  * MIT License
  */
 (() => {
-const VERSION = '1.3.4';
+const VERSION = '1.4.0';
 const STRUCT = "\n\n\nbutton{font-family:inherit;color:inherit;border:none;cursor:pointer;transition:transform .08s,box-shadow .12s}\n.scr{width:390px;height:844px;box-sizing:border-box;padding:52px 16px 22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}\n.hd{display:flex;align-items:center;gap:8px}.ttl{font-size:24px;font-weight:800;flex:1}\n.hi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center}\n.card{display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:20px}\n.devs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n.dev{display:flex;align-items:center;gap:8px}\n.di{width:36px;height:36px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;background:rgba(128,128,128,.14)}\n.np{display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid rgba(128,128,128,.25)}\n.npt{display:flex;flex-direction:column;flex:1;gap:1px}.npk{font-size:10px;font-weight:800;opacity:.65;letter-spacing:.06em;text-transform:uppercase}\n.nb{width:32px;height:32px;border-radius:10px;font-size:12px}\n.thumb{width:64px;height:44px;border-radius:10px;background:linear-gradient(160deg,#3d6f9e,#a9c9e8 55%,#24405e);flex:none}\n.ci{display:flex;flex-direction:column;gap:3px;flex:1}.nm{font-size:15px;font-weight:800}.st{font-size:12px;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:4px}\n.ampi{font-size:12px;font-weight:800;padding:6px 10px;border-radius:12px}\n.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:4px;border-radius:16px}\n.tab{height:40px;border-radius:12px;font-size:13px;font-weight:800;position:relative;overflow:hidden}\n.lbl{font-size:13px;font-weight:800;margin-bottom:-4px}\n.apps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}\n.app{height:54px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 2px;font-size:10px;white-space:nowrap;font-weight:800;position:relative;overflow:hidden}\n.badge{width:22px;height:22px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}\n.mid{display:flex;align-items:center;justify-content:space-between}\n.rock{width:62px;height:190px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 0;box-sizing:border-box;position:relative;overflow:hidden}\n.rk{width:52px;height:56px;border-radius:18px;background:transparent;font-size:26px;font-weight:700}\n.vl{font-size:10px;font-weight:800;text-align:center;line-height:1.4}\n.dpad{width:196px;height:196px;border-radius:98px;position:relative;isolation:isolate}\n.dk{position:absolute;width:48px;height:48px;background:transparent;display:flex;align-items:center;justify-content:center;border-radius:24px;z-index:2}\n.u{left:74px;top:6px}.dn{left:74px;bottom:6px}.l{left:6px;top:74px}.r{right:6px;top:74px}\n.ok{position:absolute;left:56px;top:56px;width:84px;height:84px;border-radius:42px;font-size:20px;font-weight:800;z-index:2}\n.side{display:flex;flex-direction:column;gap:10px}\n.sk{width:58px;height:56px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:9px;font-weight:800;position:relative;overflow:hidden}\n.media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}\n.mk{height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}\n.big{height:60px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:800;margin-top:auto;position:relative;overflow:hidden}\n\n.uni{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}\n.pan{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0;overflow-y:auto;padding:4px 6px 10px;margin:0 -6px}\n.g3,.g4,.g5{display:grid;gap:8px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}\n.pan .mk{height:44px;font-size:11px;font-weight:800;gap:6px;flex:none}\n.pan .lbl{margin:4px 0 -2px}\n.pan .rock{height:176px;flex:none}\n.pan .mid{flex:none}\n.mk.on{outline:2px solid currentColor;outline-offset:1px}\n.mk.dg{font-size:17px;height:48px}\n.mk.big2{font-size:24px;height:50px}\n.mk.pwr{color:#e5484d}\n.mk.rec{color:#e5484d}\n.cdot{width:22px;height:14px;border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.3)}\n.vread{display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}\n.pan .sk span{font-size:9px;line-height:1.1;text-align:center}\n";
 const THEMES = {
  "cream": "\n.scr{background:linear-gradient(180deg,#f1ece5 0%,#e9e2d8 100%);color:#2b2420;font-family:Nunito,system-ui,sans-serif}\n.ttl{font-size:26px;color:#2b2420}\n.hi{background:transparent;box-shadow:none;color:#3a312b}\n.card,.app,.rock,.sk,.mk{background:linear-gradient(180deg,#fbf9f6 0%,#f3eee8 100%);border:1px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(120,95,70,.16),0 1px 2px rgba(120,95,70,.12),inset 0 -2px 3px rgba(150,125,100,.08)}\n.card{border-radius:24px}\n.app{border-radius:999px;justify-content:center;padding:0 8px}\n.rock{border-radius:999px}\n.sk{border-radius:16px}\n.mk{border-radius:999px}\n.tabs{background:#e6dfd5;box-shadow:inset 0 1px 3px rgba(120,95,70,.18)}\n.tab{border-radius:999px;background:linear-gradient(180deg,#fbf9f6,#f1ebe4);color:#3a312b;box-shadow:0 2px 5px rgba(120,95,70,.14)}\n.tab.on{background:linear-gradient(180deg,#8d6446,#6e4a30);color:#fff;box-shadow:0 4px 10px rgba(110,74,48,.35)}\n.ampi{background:#efe8df;color:#6e4a30;border-radius:999px}\n.di{background:#efe8df;color:#3a312b}\n.dot{box-shadow:0 0 0 2px rgba(47,184,106,.2)}\n.app.on{background:linear-gradient(180deg,#f3ece4,#ebe3d9);box-shadow:inset 0 2px 5px rgba(120,95,70,.22);outline:2px solid #8d6446;outline-offset:1px}\n.badge{border-radius:6px}\n.dpad{background:radial-gradient(circle at 50% 35%,#fdfcfa 0%,#f4efe9 60%,#ebe4db 100%);box-shadow:0 12px 26px rgba(120,95,70,.2),0 2px 4px rgba(120,95,70,.12),inset 0 -3px 6px rgba(150,125,100,.1)}\n.dk{color:#3a312b}\n.dk svg{stroke-width:2}\n.ok{left:62px;top:62px;width:72px;height:72px;background:linear-gradient(180deg,#fdfcfa,#f0eae2);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 10px rgba(120,95,70,.22),0 0 0 6px rgba(235,228,219,.6);color:#2b2420;font-size:19px}\n.rk{color:#3a312b;font-weight:600}\n.sk.on{color:#b3261e}\n.big{border-radius:999px;color:#fff;background:linear-gradient(180deg,#8d6446 0%,#6e4a30 100%);box-shadow:0 10px 22px rgba(110,74,48,.35),0 2px 0 #573a25;font-weight:700}\n.hi:active{transform:scale(.9)}\n.app:active,.sk:active,.mk:active,.tab:active,.card:active{transform:scale(.96);box-shadow:inset 0 3px 7px rgba(120,95,70,.26)}\n.rk:active,.dk:active{transform:scale(.88);background:rgba(120,95,70,.08)}\n.ok:active{transform:scale(.94);box-shadow:inset 0 3px 8px rgba(120,95,70,.3),0 0 0 6px rgba(235,228,219,.6)}\n.big:active{transform:translateY(2px);box-shadow:0 3px 8px rgba(110,74,48,.3),inset 0 3px 8px rgba(0,0,0,.25)}\n",
@@ -83,6 +83,7 @@ const I = {
   cast: SV('<path d="M3 8V6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2h-6"></path><path d="M3 12a8 8 0 018 8M3 16a4 4 0 014 4"></path>'),
   gear: SV('<circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path>'),
   close: SV('<path d="M6 6l12 12M18 6L6 18"></path>'),
+  kb: SV('<rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"></path>'),
   tv: SV('<rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path>'),
   amp: SV('<rect x="2" y="7" width="20" height="10" rx="2"></rect><circle cx="17" cy="12" r="2.5"></circle><path d="M5 11h5M5 13.5h3"></path>'),
   rew: SF('<path d="M11 6L3 12l8 6V6zm10 0l-8 6 8 6V6z"></path>'),
@@ -108,6 +109,11 @@ const EXTRA = `
 .ov{overflow:hidden}
 @media (min-width:700px){.ov .scr.inmod{height:92vh;max-height:92vh}}
 .tile{cursor:pointer}
+.kbb{width:100%;gap:8px}
+.kbp{display:flex;flex-direction:column;gap:8px}
+.kbin{width:100%;box-sizing:border-box;height:48px;border-radius:14px;border:2px solid currentColor;padding:0 14px;font:700 16px/1 inherit;font-family:inherit;background:rgba(255,255,255,.92);color:#111}
+.kbr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.kbr .mk{height:44px;font-size:12px;font-weight:800}
 button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .qsp{flex:1}
 .ttl{flex:none!important}
@@ -177,6 +183,10 @@ class PilotyCard extends HTMLElement {
       }, 400);
     });
     ['pointerup', 'pointercancel'].forEach((ev) => window.addEventListener(ev, stop));
+    this.shadowRoot.addEventListener('input', (e) => { if (e.target.classList && e.target.classList.contains('kbin')) this._kbText = e.target.value; });
+    this.shadowRoot.addEventListener('keydown', (e) => {
+      if (e.target.classList && e.target.classList.contains('kbin') && e.key === 'Enter') { e.preventDefault(); this._act('kbenter'); }
+    });
     this.shadowRoot.addEventListener('contextmenu', (e) => { if (e.target.closest('[data-a]')) e.preventDefault(); });
   }
 
@@ -427,6 +437,22 @@ class PilotyCard extends HTMLElement {
         return;
       }
       case 'tv': this._tv(v); return;
+      case 'kb': this._kb = !this._kb; this._render(true); if (this._kb) setTimeout(() => { const i = this.shadowRoot.querySelector('.kbin'); if (i) i.focus(); }, 30); return;
+      case 'kbsend': {
+        const i = this.shadowRoot.querySelector('.kbin');
+        const txt = (i ? i.value : this._kbText) || '';
+        if (txt) await this._tv(`text:${txt}`);
+        this._kbText = ''; if (i) { i.value = ''; i.focus(); }
+        return;
+      }
+      case 'kbenter': {
+        const i = this.shadowRoot.querySelector('.kbin');
+        const txt = (i ? i.value : this._kbText) || '';
+        if (txt) await this._tv(`text:${txt}`);
+        this._kbText = ''; if (i) i.value = '';
+        await this._tv('ENTER');
+        return;
+      }
       case 'ampr': this._ampr(v); return;
       case 'src': this._call('media_player', 'select_source', Object.assign({ source: v }, amp)); return;
       case 'mode': this._call('media_player', 'select_sound_mode', Object.assign({ sound_mode: v }, amp)); return;
@@ -538,6 +564,7 @@ ${this._dpad('tv', { up: 'DPAD_UP', down: 'DPAD_DOWN', left: 'DPAD_LEFT', right:
 <div class="side">${this._btn('sk', 'tv', 'BACK', I.back, 'Wstecz')}${this._btn('sk', 'tv', 'HOME', I.home, 'Home')}${this._btn(`sk${m.muted ? ' on' : ''}`, 'mute', undefined, `${I.mute}<span>Wycisz</span>`)}</div>
 </div>
 <div class="media">${this._btn('mk', 'tv', 'MEDIA_REWIND', I.rew, 'Przewiń wstecz')}${this._btn('mk', 'tv', 'MEDIA_PLAY_PAUSE', I.pp, 'Play pauza')}${this._btn('mk', 'tv', 'MEDIA_FAST_FORWARD', I.ff, 'Do przodu')}</div>
+${this._btn('mk kbb', 'kb', undefined, `${I.kb}<span>Klawiatura</span>`, 'Klawiatura')}
 ${this._btn('big', 'power', undefined, `${I.power}<span>${m.tvOn ? 'Wyłącz wszystko' : 'Włącz wszystko'}</span>`)}
 </div>`;
   }
@@ -560,6 +587,7 @@ ${this._dpad('tv', { up: 'DPAD_UP', down: 'DPAD_DOWN', left: 'DPAD_LEFT', right:
 <div class="g5">${k('MEDIA_REWIND', I.rew, 'Przewiń wstecz')}${k('MEDIA_PLAY_PAUSE', I.pp, 'Play pauza')}${k('MEDIA_FAST_FORWARD', I.ff, 'Do przodu')}${k('MEDIA_STOP', I.stop, 'Stop')}${k('MEDIA_RECORD', I.rec, 'Nagrywaj', ' rec')}</div>
 <div class="g3">${k('CAPTIONS', 'Napisy')}${k('MEDIA_AUDIO_TRACK', 'Audio')}${k('TV_TELETEXT', 'Teletekst')}</div>
 <div class="g4">${color('PROG_RED', '#e5484d', 'Czerwony')}${color('PROG_GREEN', '#30a46c', 'Zielony')}${color('PROG_YELLOW', '#f5d90a', 'Żółty')}${color('PROG_BLUE', '#3e63dd', 'Niebieski')}</div>
+${this._btn('mk kbb', 'kb', undefined, `${I.kb}<span>Klawiatura</span>`, 'Klawiatura')}
 <span class="lbl">Cyfry</span>
 <div class="g3">${digits}</div>
 </div>`;
@@ -639,6 +667,7 @@ ${this._menuHtml(theme)}
 ${this._banner()}
 ${this._status(m, true)}
 <div class="tabs">${tabs}</div>
+${this._kb ? `<div class="kbp"><input class="kbin" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Wpisz tekst, np. tytuł filmu" value="${esc(this._kbText || '')}"><div class="kbr">${this._btn('mk', 'tv', 'DEL', '⌫', 'Usuń znak na TV')}${this._btn('mk', 'kbsend', undefined, 'Wyślij')}${this._btn('mk', 'kbenter', undefined, 'Szukaj ⏎')}${this._btn('mk', 'kb', undefined, I.close, 'Zamknij klawiaturę')}</div></div>` : ''}
 </div>
 <div class="bodyw">${body}</div>
 </div>`;
@@ -659,14 +688,16 @@ ${this._btn('big', 'open', undefined, '<span>Otwórz pilota</span>')}
     if (!this._hass || !this._c) return;
     const theme = this._theme();
     const m = this._model();
-    const key = JSON.stringify([theme, this._tab, this._open, this._menu, this._allModes, this._userTheme, this._devTheme, this._err, this._missing(), m]);
+    const key = JSON.stringify([theme, this._tab, this._open, this._menu, this._kb, this._allModes, this._userTheme, this._devTheme, this._err, this._missing(), m]);
     if (!force && key === this._key) return;
     this._key = key;
     const css = `<style>${STRUCT}\n${THEMES[theme]}\n${EXTRA}</style>`;
     let html;
     if (this._c.mode === 'card') html = this._remote(m, theme, false);
     else html = this._tile(m, theme) + (this._open ? `<div class="ov">${this._remote(m, theme, true)}</div>` : '');
+    const hadFocus = this._kb && this.shadowRoot.activeElement && this.shadowRoot.activeElement.classList.contains('kbin');
     this.shadowRoot.innerHTML = css + html;
+    if (hadFocus) { const i = this.shadowRoot.querySelector('.kbin'); if (i) { i.focus(); const n = i.value.length; i.setSelectionRange(n, n); } }
     const ov = this.shadowRoot.querySelector('.ov');
     if (ov) ov.addEventListener('click', (e) => { if (e.target === ov) this._act('close'); });
   }
