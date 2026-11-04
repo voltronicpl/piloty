@@ -4,7 +4,7 @@
  * MIT License
  */
 (() => {
-const VERSION = '1.3.2';
+const VERSION = '1.3.3';
 const STRUCT = "\n\n\nbutton{font-family:inherit;color:inherit;border:none;cursor:pointer;transition:transform .08s,box-shadow .12s}\n.scr{width:390px;height:844px;box-sizing:border-box;padding:52px 16px 22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}\n.hd{display:flex;align-items:center;gap:8px}.ttl{font-size:24px;font-weight:800;flex:1}\n.hi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center}\n.card{display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:20px}\n.devs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n.dev{display:flex;align-items:center;gap:8px}\n.di{width:36px;height:36px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;background:rgba(128,128,128,.14)}\n.np{display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid rgba(128,128,128,.25)}\n.npt{display:flex;flex-direction:column;flex:1;gap:1px}.npk{font-size:10px;font-weight:800;opacity:.65;letter-spacing:.06em;text-transform:uppercase}\n.nb{width:32px;height:32px;border-radius:10px;font-size:12px}\n.thumb{width:64px;height:44px;border-radius:10px;background:linear-gradient(160deg,#3d6f9e,#a9c9e8 55%,#24405e);flex:none}\n.ci{display:flex;flex-direction:column;gap:3px;flex:1}.nm{font-size:15px;font-weight:800}.st{font-size:12px;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:4px}\n.ampi{font-size:12px;font-weight:800;padding:6px 10px;border-radius:12px}\n.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:4px;border-radius:16px}\n.tab{height:40px;border-radius:12px;font-size:13px;font-weight:800;position:relative;overflow:hidden}\n.lbl{font-size:13px;font-weight:800;margin-bottom:-4px}\n.apps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}\n.app{height:54px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 2px;font-size:10px;white-space:nowrap;font-weight:800;position:relative;overflow:hidden}\n.badge{width:22px;height:22px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}\n.mid{display:flex;align-items:center;justify-content:space-between}\n.rock{width:62px;height:190px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 0;box-sizing:border-box;position:relative;overflow:hidden}\n.rk{width:52px;height:56px;border-radius:18px;background:transparent;font-size:26px;font-weight:700}\n.vl{font-size:10px;font-weight:800;text-align:center;line-height:1.4}\n.dpad{width:196px;height:196px;border-radius:98px;position:relative;isolation:isolate}\n.dk{position:absolute;width:48px;height:48px;background:transparent;display:flex;align-items:center;justify-content:center;border-radius:24px;z-index:2}\n.u{left:74px;top:6px}.dn{left:74px;bottom:6px}.l{left:6px;top:74px}.r{right:6px;top:74px}\n.ok{position:absolute;left:56px;top:56px;width:84px;height:84px;border-radius:42px;font-size:20px;font-weight:800;z-index:2}\n.side{display:flex;flex-direction:column;gap:10px}\n.sk{width:58px;height:56px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:9px;font-weight:800;position:relative;overflow:hidden}\n.media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}\n.mk{height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}\n.big{height:60px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:800;margin-top:auto;position:relative;overflow:hidden}\n\n.uni{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}\n.pan{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0;overflow-y:auto;padding:4px 6px 10px;margin:0 -6px}\n.g3,.g4,.g5{display:grid;gap:8px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}\n.pan .mk{height:44px;font-size:11px;font-weight:800;gap:6px;flex:none}\n.pan .lbl{margin:4px 0 -2px}\n.pan .rock{height:176px;flex:none}\n.pan .mid{flex:none}\n.mk.on{outline:2px solid currentColor;outline-offset:1px}\n.mk.dg{font-size:17px;height:48px}\n.mk.big2{font-size:24px;height:50px}\n.mk.pwr{color:#e5484d}\n.mk.rec{color:#e5484d}\n.cdot{width:22px;height:14px;border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.3)}\n.vread{display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}\n.pan .sk span{font-size:9px;line-height:1.1;text-align:center}\n";
 const THEMES = {
  "cream": "\n.scr{background:linear-gradient(180deg,#f1ece5 0%,#e9e2d8 100%);color:#2b2420;font-family:Nunito,system-ui,sans-serif}\n.ttl{font-size:26px;color:#2b2420}\n.hi{background:transparent;box-shadow:none;color:#3a312b}\n.card,.app,.rock,.sk,.mk{background:linear-gradient(180deg,#fbf9f6 0%,#f3eee8 100%);border:1px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(120,95,70,.16),0 1px 2px rgba(120,95,70,.12),inset 0 -2px 3px rgba(150,125,100,.08)}\n.card{border-radius:24px}\n.app{border-radius:999px;justify-content:center;padding:0 8px}\n.rock{border-radius:999px}\n.sk{border-radius:16px}\n.mk{border-radius:999px}\n.tabs{background:#e6dfd5;box-shadow:inset 0 1px 3px rgba(120,95,70,.18)}\n.tab{border-radius:999px;background:linear-gradient(180deg,#fbf9f6,#f1ebe4);color:#3a312b;box-shadow:0 2px 5px rgba(120,95,70,.14)}\n.tab.on{background:linear-gradient(180deg,#8d6446,#6e4a30);color:#fff;box-shadow:0 4px 10px rgba(110,74,48,.35)}\n.ampi{background:#efe8df;color:#6e4a30;border-radius:999px}\n.di{background:#efe8df;color:#3a312b}\n.dot{box-shadow:0 0 0 2px rgba(47,184,106,.2)}\n.app.on{background:linear-gradient(180deg,#f3ece4,#ebe3d9);box-shadow:inset 0 2px 5px rgba(120,95,70,.22);outline:2px solid #8d6446;outline-offset:1px}\n.badge{border-radius:6px}\n.dpad{background:radial-gradient(circle at 50% 35%,#fdfcfa 0%,#f4efe9 60%,#ebe4db 100%);box-shadow:0 12px 26px rgba(120,95,70,.2),0 2px 4px rgba(120,95,70,.12),inset 0 -3px 6px rgba(150,125,100,.1)}\n.dk{color:#3a312b}\n.dk svg{stroke-width:2}\n.ok{left:62px;top:62px;width:72px;height:72px;background:linear-gradient(180deg,#fdfcfa,#f0eae2);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 10px rgba(120,95,70,.22),0 0 0 6px rgba(235,228,219,.6);color:#2b2420;font-size:19px}\n.rk{color:#3a312b;font-weight:600}\n.sk.on{color:#b3261e}\n.big{border-radius:999px;color:#fff;background:linear-gradient(180deg,#8d6446 0%,#6e4a30 100%);box-shadow:0 10px 22px rgba(110,74,48,.35),0 2px 0 #573a25;font-weight:700}\n.hi:active{transform:scale(.9)}\n.app:active,.sk:active,.mk:active,.tab:active,.card:active{transform:scale(.96);box-shadow:inset 0 3px 7px rgba(120,95,70,.26)}\n.rk:active,.dk:active{transform:scale(.88);background:rgba(120,95,70,.08)}\n.ok:active{transform:scale(.94);box-shadow:inset 0 3px 8px rgba(120,95,70,.3),0 0 0 6px rgba(235,228,219,.6)}\n.big:active{transform:translateY(2px);box-shadow:0 3px 8px rgba(110,74,48,.3),inset 0 3px 8px rgba(0,0,0,.25)}\n",
@@ -36,9 +36,9 @@ const DEFAULT_APPS = [
   { name: 'YouTube', short: '▶', color: '#ff0033', app_id: 'com.google.android.youtube.tv', activity: 'https://www.youtube.com' },
   { name: 'Prime', short: 'pv', color: '#1a98ff', app_id: 'com.amazon.amazonvideo.livingroom', activity: 'https://app.primevideo.com' },
   { name: 'Player', short: 'P', color: '#7b2ff7', app_id: 'pl.tvn.player.tv', activity: mk('pl.tvn.player.tv') },
-  { name: 'HBO Max', short: 'H', color: '#5b2bdb', app_id: 'com.wbd.stream', activity: 'com.wbd.stream' },
-  { name: 'Polsat Go', short: 'PG', color: '#e2001a', app_id: 'pl.cyfrowypolsat.flexigo', activity: 'pl.cyfrowypolsat.flexigo' },
-  { name: 'Disney+', short: 'D+', color: '#0b3d91', app_id: 'com.disney.disneyplus', activity: 'com.disney.disneyplus' },
+  { name: 'HBO Max', short: 'H', color: '#5b2bdb', app_id: 'com.wbd.stream', activity: 'https://play.hbomax.com' },
+  { name: 'Polsat Go', short: 'PG', color: '#e2001a', app_id: 'pl.cyfrowypolsat.cpgo', activity: 'https://polsatboxgo.pl/wideo' },
+  { name: 'Disney+', short: 'D+', color: '#0b3d91', app_id: 'com.disney.disneyplus', activity: 'https://www.disneyplus.com/home' },
   { name: 'Spotify', short: '♫', color: '#1db954', app_id: 'com.spotify.tv.android', activity: 'spotify://' },
   { name: 'HDMI 1', short: '⇥', color: '#5a6270', command: 'TV_INPUT_HDMI_1' }
 ];
@@ -108,6 +108,7 @@ const EXTRA = `
 .ov{overflow:hidden}
 @media (min-width:700px){.ov .scr.inmod{height:92vh;max-height:92vh}}
 .tile{cursor:pointer}
+button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .qsp{flex:1}
 .ttl{flex:none!important}
 .qp{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;font:800 12px/1 inherit;font-family:inherit;color:#fff;background:linear-gradient(180deg,#3fb56d,#23894b);box-shadow:0 4px 12px rgba(35,137,75,.45),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .08s}
@@ -155,8 +156,28 @@ class PilotyCard extends HTMLElement {
       const b = e.target.closest('[data-a]');
       if (!b) return;
       e.stopPropagation();
+      if (this._held) { this._held = false; return; }
       this._act(b.dataset.a, b.dataset.v);
     });
+    // Przytrzymanie: głośność, kanały i strzałki powtarzają się same.
+    const REPEAT = (a, v) => a === 'volup' || a === 'voldown'
+      || (a === 'tv' && /^(CHANNEL_UP|CHANNEL_DOWN|DPAD_UP|DPAD_DOWN|DPAD_LEFT|DPAD_RIGHT|MEDIA_REWIND|MEDIA_FAST_FORWARD)$/.test(v || ''))
+      || (a === 'ampr' && /^(up|down|left|right)$/.test(v || ''));
+    const stop = () => { clearTimeout(this._holdT); clearInterval(this._holdI); this._holdT = null; this._holdI = null; };
+    this.shadowRoot.addEventListener('pointerdown', (e) => {
+      const b = e.target.closest('[data-a]');
+      if (!b || !REPEAT(b.dataset.a, b.dataset.v)) return;
+      const a = b.dataset.a; const v = b.dataset.v;
+      stop();
+      this._held = false;
+      this._holdT = setTimeout(() => {
+        this._held = true;
+        this._act(a, v);
+        this._holdI = setInterval(() => this._act(a, v), 220);
+      }, 400);
+    });
+    ['pointerup', 'pointercancel'].forEach((ev) => window.addEventListener(ev, stop));
+    this.shadowRoot.addEventListener('contextmenu', (e) => { if (e.target.closest('[data-a]')) e.preventDefault(); });
   }
 
   static getStubConfig(hass) {
@@ -254,7 +275,7 @@ class PilotyCard extends HTMLElement {
     let cur = -1;
     this._apps.forEach((ap, i) => {
       const ovA = ((this._links || {})[ap.name] || {}).activity;
-      const id = (ovA && ovA.indexOf('://') < 0 ? ovA : '') || ap.app_id || (ap.activity && ap.activity.indexOf('://') < 0 ? ap.activity : '');
+      const id = (ovA && ovA.indexOf(':') < 0 ? ovA : '') || ap.app_id || (ap.activity && ap.activity.indexOf(':') < 0 ? ap.activity : '');
       if (cur < 0 && id && appId && (id === appId || appId.indexOf(id) === 0)) cur = i;
     });
     if (cur < 0 && appName) cur = this._apps.findIndex((ap) => ap.name.toLowerCase() === appName.toLowerCase());
@@ -398,7 +419,7 @@ class PilotyCard extends HTMLElement {
         const ov = ((this._links || {})[ap.name] || {}).activity;
         const actRaw = ov || ap.activity;
         if (actRaw) {
-          const act = actRaw.indexOf('://') < 0 ? `market://launch?id=${actRaw}` : actRaw;
+          const act = actRaw.indexOf(':') < 0 ? `market://launch?id=${actRaw}` : actRaw;
           await this._call('remote', 'turn_on', { entity_id: c.tv_remote, activity: act });
         }
         else if (ap.command) await this._tv(ap.command);
