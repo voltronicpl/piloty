@@ -4,7 +4,7 @@
  * MIT License
  */
 (() => {
-const VERSION = '1.3.0';
+const VERSION = '1.3.1';
 const STRUCT = "\n\n\nbutton{font-family:inherit;color:inherit;border:none;cursor:pointer;transition:transform .08s,box-shadow .12s}\n.scr{width:390px;height:844px;box-sizing:border-box;padding:52px 16px 22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}\n.hd{display:flex;align-items:center;gap:8px}.ttl{font-size:24px;font-weight:800;flex:1}\n.hi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center}\n.card{display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:20px}\n.devs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n.dev{display:flex;align-items:center;gap:8px}\n.di{width:36px;height:36px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;background:rgba(128,128,128,.14)}\n.np{display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid rgba(128,128,128,.25)}\n.npt{display:flex;flex-direction:column;flex:1;gap:1px}.npk{font-size:10px;font-weight:800;opacity:.65;letter-spacing:.06em;text-transform:uppercase}\n.nb{width:32px;height:32px;border-radius:10px;font-size:12px}\n.thumb{width:64px;height:44px;border-radius:10px;background:linear-gradient(160deg,#3d6f9e,#a9c9e8 55%,#24405e);flex:none}\n.ci{display:flex;flex-direction:column;gap:3px;flex:1}.nm{font-size:15px;font-weight:800}.st{font-size:12px;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:4px}\n.ampi{font-size:12px;font-weight:800;padding:6px 10px;border-radius:12px}\n.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:4px;border-radius:16px}\n.tab{height:40px;border-radius:12px;font-size:13px;font-weight:800;position:relative;overflow:hidden}\n.lbl{font-size:13px;font-weight:800;margin-bottom:-4px}\n.apps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}\n.app{height:54px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 2px;font-size:10px;white-space:nowrap;font-weight:800;position:relative;overflow:hidden}\n.badge{width:22px;height:22px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}\n.mid{display:flex;align-items:center;justify-content:space-between}\n.rock{width:62px;height:190px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 0;box-sizing:border-box;position:relative;overflow:hidden}\n.rk{width:52px;height:56px;border-radius:18px;background:transparent;font-size:26px;font-weight:700}\n.vl{font-size:10px;font-weight:800;text-align:center;line-height:1.4}\n.dpad{width:196px;height:196px;border-radius:98px;position:relative;isolation:isolate}\n.dk{position:absolute;width:48px;height:48px;background:transparent;display:flex;align-items:center;justify-content:center;border-radius:24px;z-index:2}\n.u{left:74px;top:6px}.dn{left:74px;bottom:6px}.l{left:6px;top:74px}.r{right:6px;top:74px}\n.ok{position:absolute;left:56px;top:56px;width:84px;height:84px;border-radius:42px;font-size:20px;font-weight:800;z-index:2}\n.side{display:flex;flex-direction:column;gap:10px}\n.sk{width:58px;height:56px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:9px;font-weight:800;position:relative;overflow:hidden}\n.media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}\n.mk{height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}\n.big{height:60px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:800;margin-top:auto;position:relative;overflow:hidden}\n\n.uni{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}\n.pan{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0;overflow-y:auto;padding:4px 6px 10px;margin:0 -6px}\n.g3,.g4,.g5{display:grid;gap:8px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}\n.pan .mk{height:44px;font-size:11px;font-weight:800;gap:6px;flex:none}\n.pan .lbl{margin:4px 0 -2px}\n.pan .rock{height:176px;flex:none}\n.pan .mid{flex:none}\n.mk.on{outline:2px solid currentColor;outline-offset:1px}\n.mk.dg{font-size:17px;height:48px}\n.mk.big2{font-size:24px;height:50px}\n.mk.pwr{color:#e5484d}\n.mk.rec{color:#e5484d}\n.cdot{width:22px;height:14px;border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.3)}\n.vread{display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}\n.pan .sk span{font-size:9px;line-height:1.1;text-align:center}\n";
 const THEMES = {
  "cream": "\n.scr{background:linear-gradient(180deg,#f1ece5 0%,#e9e2d8 100%);color:#2b2420;font-family:Nunito,system-ui,sans-serif}\n.ttl{font-size:26px;color:#2b2420}\n.hi{background:transparent;box-shadow:none;color:#3a312b}\n.card,.app,.rock,.sk,.mk{background:linear-gradient(180deg,#fbf9f6 0%,#f3eee8 100%);border:1px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(120,95,70,.16),0 1px 2px rgba(120,95,70,.12),inset 0 -2px 3px rgba(150,125,100,.08)}\n.card{border-radius:24px}\n.app{border-radius:999px;justify-content:center;padding:0 8px}\n.rock{border-radius:999px}\n.sk{border-radius:16px}\n.mk{border-radius:999px}\n.tabs{background:#e6dfd5;box-shadow:inset 0 1px 3px rgba(120,95,70,.18)}\n.tab{border-radius:999px;background:linear-gradient(180deg,#fbf9f6,#f1ebe4);color:#3a312b;box-shadow:0 2px 5px rgba(120,95,70,.14)}\n.tab.on{background:linear-gradient(180deg,#8d6446,#6e4a30);color:#fff;box-shadow:0 4px 10px rgba(110,74,48,.35)}\n.ampi{background:#efe8df;color:#6e4a30;border-radius:999px}\n.di{background:#efe8df;color:#3a312b}\n.dot{box-shadow:0 0 0 2px rgba(47,184,106,.2)}\n.app.on{background:linear-gradient(180deg,#f3ece4,#ebe3d9);box-shadow:inset 0 2px 5px rgba(120,95,70,.22);outline:2px solid #8d6446;outline-offset:1px}\n.badge{border-radius:6px}\n.dpad{background:radial-gradient(circle at 50% 35%,#fdfcfa 0%,#f4efe9 60%,#ebe4db 100%);box-shadow:0 12px 26px rgba(120,95,70,.2),0 2px 4px rgba(120,95,70,.12),inset 0 -3px 6px rgba(150,125,100,.1)}\n.dk{color:#3a312b}\n.dk svg{stroke-width:2}\n.ok{left:62px;top:62px;width:72px;height:72px;background:linear-gradient(180deg,#fdfcfa,#f0eae2);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 10px rgba(120,95,70,.22),0 0 0 6px rgba(235,228,219,.6);color:#2b2420;font-size:19px}\n.rk{color:#3a312b;font-weight:600}\n.sk.on{color:#b3261e}\n.big{border-radius:999px;color:#fff;background:linear-gradient(180deg,#8d6446 0%,#6e4a30 100%);box-shadow:0 10px 22px rgba(110,74,48,.35),0 2px 0 #573a25;font-weight:700}\n.hi:active{transform:scale(.9)}\n.app:active,.sk:active,.mk:active,.tab:active,.card:active{transform:scale(.96);box-shadow:inset 0 3px 7px rgba(120,95,70,.26)}\n.rk:active,.dk:active{transform:scale(.88);background:rgba(120,95,70,.08)}\n.ok:active{transform:scale(.94);box-shadow:inset 0 3px 8px rgba(120,95,70,.3),0 0 0 6px rgba(235,228,219,.6)}\n.big:active{transform:translateY(2px);box-shadow:0 3px 8px rgba(110,74,48,.3),inset 0 3px 8px rgba(0,0,0,.25)}\n",
@@ -36,9 +36,9 @@ const DEFAULT_APPS = [
   { name: 'YouTube', short: '▶', color: '#ff0033', app_id: 'com.google.android.youtube.tv', activity: 'https://www.youtube.com' },
   { name: 'Prime', short: 'pv', color: '#1a98ff', app_id: 'com.amazon.amazonvideo.livingroom', activity: 'https://app.primevideo.com' },
   { name: 'Player', short: 'P', color: '#7b2ff7', app_id: 'pl.tvn.player.tv', activity: mk('pl.tvn.player.tv') },
-  { name: 'HBO Max', short: 'H', color: '#5b2bdb', app_id: 'com.wbd.stream', activity: mk('com.wbd.stream') },
-  { name: 'Polsat Go', short: 'PG', color: '#e2001a', app_id: 'pl.cyfrowypolsat.flexigo', activity: mk('pl.cyfrowypolsat.flexigo') },
-  { name: 'Disney+', short: 'D+', color: '#0b3d91', app_id: 'com.disney.disneyplus', activity: 'https://www.disneyplus.com' },
+  { name: 'HBO Max', short: 'H', color: '#5b2bdb', app_id: 'com.wbd.stream', activity: 'com.wbd.stream' },
+  { name: 'Polsat Go', short: 'PG', color: '#e2001a', app_id: 'pl.cyfrowypolsat.flexigo', activity: 'pl.cyfrowypolsat.flexigo' },
+  { name: 'Disney+', short: 'D+', color: '#0b3d91', app_id: 'com.disney.disneyplus', activity: 'com.disney.disneyplus' },
   { name: 'Spotify', short: '♫', color: '#1db954', app_id: 'com.spotify.tv.android', activity: 'spotify://' },
   { name: 'HDMI 1', short: '⇥', color: '#5a6270', command: 'TV_INPUT_HDMI_1' }
 ];
@@ -253,7 +253,8 @@ class PilotyCard extends HTMLElement {
     const appName = tvp && tvp.attributes ? (tvp.attributes.app_name || '') : '';
     let cur = -1;
     this._apps.forEach((ap, i) => {
-      const id = ap.app_id || (ap.activity && ap.activity.indexOf('://') < 0 ? ap.activity : '');
+      const ovA = ((this._links || {})[ap.name] || {}).activity;
+      const id = (ovA && ovA.indexOf('://') < 0 ? ovA : '') || ap.app_id || (ap.activity && ap.activity.indexOf('://') < 0 ? ap.activity : '');
       if (cur < 0 && id && appId && (id === appId || appId.indexOf(id) === 0)) cur = i;
     });
     if (cur < 0 && appName) cur = this._apps.findIndex((ap) => ap.name.toLowerCase() === appName.toLowerCase());
@@ -394,8 +395,10 @@ class PilotyCard extends HTMLElement {
       case 'app': {
         const ap = this._apps[Number(v)];
         if (!ap) return;
-        if (ap.activity) {
-          const act = ap.activity.indexOf('://') < 0 ? `market://launch?id=${ap.activity}` : ap.activity;
+        const ov = ((this._links || {})[ap.name] || {}).activity;
+        const actRaw = ov || ap.activity;
+        if (actRaw) {
+          const act = actRaw.indexOf('://') < 0 ? `market://launch?id=${actRaw}` : actRaw;
           await this._call('remote', 'turn_on', { entity_id: c.tv_remote, activity: act });
         }
         else if (ap.command) await this._tv(ap.command);
@@ -466,7 +469,7 @@ class PilotyCard extends HTMLElement {
       case 'amppower': this._call('media_player', 'toggle', amp); return;
       case 'power': {
         const m = this._model();
-        if (m.tvOn || m.ampOn) {
+        if (m.tvOn) {
           this._call('remote', 'turn_off', { entity_id: c.tv_remote });
           this._call('media_player', 'turn_off', amp);
         } else {
@@ -512,7 +515,7 @@ ${this._dpad('tv', { up: 'DPAD_UP', down: 'DPAD_DOWN', left: 'DPAD_LEFT', right:
 <div class="side">${this._btn('sk', 'tv', 'BACK', I.back, 'Wstecz')}${this._btn('sk', 'tv', 'HOME', I.home, 'Home')}${this._btn(`sk${m.muted ? ' on' : ''}`, 'mute', undefined, `${I.mute}<span>Wycisz</span>`)}</div>
 </div>
 <div class="media">${this._btn('mk', 'tv', 'MEDIA_REWIND', I.rew, 'Przewiń wstecz')}${this._btn('mk', 'tv', 'MEDIA_PLAY_PAUSE', I.pp, 'Play pauza')}${this._btn('mk', 'tv', 'MEDIA_FAST_FORWARD', I.ff, 'Do przodu')}</div>
-${this._btn('big', 'power', undefined, `${I.power}<span>${m.tvOn || m.ampOn ? 'Wyłącz wszystko' : 'Włącz wszystko'}</span>`)}
+${this._btn('big', 'power', undefined, `${I.power}<span>${m.tvOn ? 'Wyłącz wszystko' : 'Włącz wszystko'}</span>`)}
 </div>`;
   }
 
@@ -619,7 +622,7 @@ ${this._status(m, true)}
   }
 
   _tile(m, theme) {
-    const on = m.tvOn || m.ampOn;
+    const on = m.tvOn;
     return `<div class="tile" data-a="open"><div class="scr">${this._extras(theme)}
 <div class="hd"><span class="ttl">${esc(this._c.room)}</span><span class="qsp"></span>${this._btn(`qp${on ? ' on' : ''}`, 'power', undefined, `${I.power}<span>${on ? 'Wyłącz' : 'Włącz'}</span>`, on ? 'Wyłącz TV i amplituner' : 'Włącz TV i amplituner')}<span class="qsp"></span>${this._btn('hi', 'menu', undefined, I.gear, 'Szata pilota')}</div>
 ${this._menuHtml(theme)}
@@ -659,7 +662,7 @@ class PilotyLinksCard extends HTMLElement {
       if (!el) return;
       const k = el.dataset.k; const f = el.dataset.f;
       const cur = Object.assign({}, this._links[k] || {});
-      if (f === 'amp_on') cur.amp_on = el.checked; else cur[f] = el.value === '__keep' ? '' : el.value;
+      if (f === 'amp_on') cur.amp_on = el.checked; else if (f === 'activity') { if (el.value.trim()) cur.activity = el.value.trim(); else delete cur.activity; } else cur[f] = el.value === '__keep' ? '' : el.value;
       if (f === 'source' && el.value === '__def') delete cur.source;
       this._links[k] = cur;
       this._dirty = true; this._saved = '';
@@ -669,6 +672,15 @@ class PilotyLinksCard extends HTMLElement {
       const b = e.target.closest('[data-act]');
       if (!b) return;
       if (b.dataset.act === 'save') this._save();
+      if (b.dataset.act === 'grab') {
+        const st = this._hass.states;
+        const tv = (this._cfg.tv_player && st[this._cfg.tv_player]) ? this._cfg.tv_player : detect(st).tv_player;
+        const id = tv && st[tv] ? (st[tv].attributes || {}).app_id : '';
+        if (!id) { this._saved = 'Najpierw otwórz tę apkę na telewizorze (TV musi być włączony)'; this._render(); return; }
+        const k = b.dataset.k;
+        this._links[k] = Object.assign({}, this._links[k] || {}, { activity: id });
+        this._dirty = true; this._saved = `${k}: pobrano ${id} – kliknij Zapisz`; this._render();
+      }
       if (b.dataset.act === 'reset') { this._links = {}; this._dirty = true; this._saved = ''; this._render(); }
       if (b.dataset.act === 'all') {
         const v = this.shadowRoot.querySelector('#allsrc').value;
@@ -730,13 +742,16 @@ class PilotyLinksCard extends HTMLElement {
       .map((e) => [e, ((this._hass.states[e].attributes || {}).friendly_name || e).replace((a.friendly_name || '').trim(), '').trim()]);
     const def = pickDefaultSource(sources) || 'HDMI1';
     const opt = (v, l, sel) => `<option value="${esc(v)}"${sel ? ' selected' : ''}>${esc(l)}</option>`;
+    const apps = Array.isArray(this._cfg.apps) && this._cfg.apps.length ? this._cfg.apps : DEFAULT_APPS;
     const rows = this._keys().map(([k, label]) => {
       const l = this._links[k] || {};
+      const ap = apps.find((x) => x.name === k);
+      const actRow = ap && ap.activity ? `<label class="wide"><span>Apka na TV (pakiet lub link) – domyślnie ${esc(ap.activity)}</span><div class="inl"><input data-k="${esc(k)}" data-f="activity" value="${esc(l.activity || '')}" placeholder="${esc(ap.activity)}"><button data-act="grab" data-k="${esc(k)}">Weź z TV</button></div></label>` : '';
       const srcSel = l.source === undefined ? '__def' : (l.source === '' ? '__keep' : l.source);
       const srcO = opt('__def', `Domyślnie (${def})`, srcSel === '__def') + opt('__keep', 'Nie zmieniaj wejścia', srcSel === '__keep') + sources.map((x) => opt(x, x, srcSel === x)).join('');
       const modeO = opt('__keep', 'Nie zmieniaj', !l.mode) + modes.map((x) => opt(x, x, l.mode === x)).join('');
       const sceneO = opt('__keep', 'Brak', !l.scene) + scenes.map(([e, n]) => opt(e, n, l.scene === e)).join('');
-      return `<div class="row"><div class="nm">${esc(label)}</div>
+      return `<div class="row"><div class="nm">${esc(label)}</div>${actRow}
 <label><span>Wejście</span><select data-k="${esc(k)}" data-f="source">${srcO}</select></label>
 <label><span>Tryb dźwięku</span><select data-k="${esc(k)}" data-f="mode">${modeO}</select></label>
 ${scenes.length ? `<label><span>Scena</span><select data-k="${esc(k)}" data-f="scene">${sceneO}</select></label>` : ''}
@@ -753,12 +768,16 @@ label{display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--seco
 label.ck{flex-direction:row;align-items:center;gap:8px;font-size:13px;color:var(--primary-text-color,#222)}
 select{width:100%;min-width:0;padding:8px;border-radius:8px;border:1px solid var(--divider-color,#ccc);background:var(--secondary-background-color,#f5f5f5);color:var(--primary-text-color,#222);font-size:14px}
 input[type=checkbox]{width:20px;height:20px}
+label.wide{grid-column:1/-1}
+.inl{display:flex;gap:6px}
+.inl input{flex:1;min-width:0;padding:8px;border-radius:8px;border:1px solid var(--divider-color,#ccc);background:var(--secondary-background-color,#f5f5f5);color:var(--primary-text-color,#222);font-size:14px}
+.inl button{padding:8px 10px;white-space:nowrap}
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 14px}
 button{border:none;border-radius:10px;padding:10px 14px;font-weight:700;font-size:14px;cursor:pointer;background:var(--secondary-background-color,#eee);color:var(--primary-text-color,#222)}
 button.pr{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
 .msg{font-size:13px;font-weight:700;color:var(--success-color,#2e7d32)}
 .warn{padding:10px;border-radius:10px;background:#fff3e0;color:#8a4b00;font-size:13px;margin-bottom:10px}
-</style><div class="c"><h3>Piloty – powiązania</h3><p>Co ma się automatycznie stać na amplitunerze po kliknięciu przycisku w pilocie uniwersalnym. Zapisuje się na Twoim koncie HA.</p>
+</style><div class="c"><h3>Piloty – powiązania</h3><p>Co ma się automatycznie stać na amplitunerze po kliknięciu przycisku w pilocie uniwersalnym. Jak apka się nie odpala: otwórz ją ręcznie na TV i kliknij „Weź z TV”. Zapisuje się na Twoim koncie HA.</p>
 ${amp ? '' : '<div class="warn">Nie znalazłem amplitunera z YNCA – dodaj w konfiguracji tej karty <b>amp: media_player.twoj_amplituner</b>.</div>'}
 <div class="bar"><select id="allsrc">${opt('__keep', 'Nie zmieniaj wejścia', false)}${sources.map((x) => opt(x, x, x === def)).join('')}</select><button data-act="all">Ustaw dla wszystkich</button></div>
 ${rows}

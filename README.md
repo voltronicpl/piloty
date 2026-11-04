@@ -94,7 +94,7 @@ Dodaj drugą kartę, żeby ustawić, co ma się dziać na amplitunerze po klikni
 type: custom:piloty-links-card
 ```
 
-Dla każdego przycisku wybierasz wejście (domyślnie **PC**, jeśli takie istnieje), tryb dźwięku, scenę i to, czy włączać amplituner. Ustawienia zapisują się na koncie użytkownika HA. Pilot korzysta z nich od razu po zapisaniu.
+Dla każdej apki możesz też podać własny pakiet albo link (przycisk **Weź z TV** pobiera go z aktualnie otwartej apki na telewizorze). Dla każdego przycisku wybierasz wejście (domyślnie **PC**, jeśli takie istnieje), tryb dźwięku, scenę i to, czy włączać amplituner. Ustawienia zapisują się na koncie użytkownika HA. Pilot korzysta z nich od razu po zapisaniu.
 
 ## Wybór szaty
 
