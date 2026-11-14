@@ -20,6 +20,15 @@ Uniwersalny pilot do Home Assistant: **telewizor z Android TV + amplituner Yamah
 2. Wyszukaj **Piloty** i zainstaluj.
 3. Odśwież przeglądarkę lub apkę (czyszczenie pamięci podręcznej).
 
+### Na telefonie / tablecie jest „?” albo „Błąd konfiguracji”
+
+To znaczy, że urządzenie nie wczytało pliku karty (na komputerze zwykle działa, bo ma go w cache).
+
+1. Otwórz na tym urządzeniu `http://ADRES_HA:8123/hacsfiles/piloty/piloty-card.js` – musi pokazać kod.
+2. Ustawienia → Pulpity → ⋮ → **Zasoby**: ma być `/hacsfiles/piloty/piloty-card.js`, typ **Moduł JavaScript**.
+3. HACS → Piloty → ⋮ → **Pobierz ponownie**.
+4. Apka Companion: Ustawienia → Companion app → Debugowanie → **Zresetuj pamięć podręczną frontendu**, potem zamknij apkę całkiem i otwórz.
+
 ## Konfiguracja
 
 Karta sama znajduje telewizor (Android TV Remote) i amplituner (YNCA), więc najprostsza konfiguracja to:
